@@ -1,0 +1,76 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 10px;
+}
+
+.header {
+  height: 99vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(135, 127, 158, 0.253),
+      rgba(224, 181, 198, 0.356)
+    ),
+    url(../img/galaxy.jpg);
+  background-size: cover;
+  background-position: center;
+  -clip-path: inset(100px 50px);
+  -clip-path: circle(500px at 50% 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.heading-primary {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 15px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 25px;
+}
+
+.text-box {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
