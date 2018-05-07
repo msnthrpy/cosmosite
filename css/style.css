@@ -7,6 +7,13 @@ Dark green: #28b485
 
 */
 
+::selection {
+  background: #909eda28; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #909eda28; /* Gecko Browsers */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,10 +33,10 @@ body {
   height: 99vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(135, 127, 158, 0.253),
-      rgba(224, 181, 198, 0.356)
+      rgba(67, 62, 82, 0.253),
+      rgba(120, 158, 214, 0.356)
     ),
-    url(../img/galaxy.jpg);
+    url(../img/notalone1.jpg);
   background-size: cover;
   background-position: center;
   -clip-path: inset(100px 50px);
@@ -50,22 +57,36 @@ body {
 
 .heading-primary {
   color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  text-align: center;
+  margin-bottom: 40px;
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
+  text-transform: uppercase;
   display: block;
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 15px;
+  animation: moveInLeft 2s ease-out .25s;
+  animation-fill-mode: backwards;
+}
+
+.heading-primary-main::selection {
+  color: rgba(32, 26, 26, 0.774);
 }
 
 .heading-primary-sub {
+  text-transform: lowercase;
   display: block;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 25px;
+  animation: moveInLeft 2s ease-out .25s;
+  animation-fill-mode: backwards;
+}
+
+.heading-primary-sub::selection {
+  color: rgba(32, 26, 26, 0.774);
 }
 
 .text-box {
@@ -73,4 +94,108 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  text-align: center;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    /* transform: translate(-50px); */
+  }
+
+  /*80% {
+    transform: translate(10px);
+  }*/
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    /* transform: translate(50px); */
+  }
+
+  /*80% {
+    transform: translate(-10px);
+  }*/
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); */
+  }
+
+  /*80% {
+    transform: translate(-10px);
+  }*/
+  100% {
+    opacity: 1;
+    transform: translateYs(0);
+  }
+}
+
+.btn {
+  backface-visibility: hidden;
+  animation: moveInLeft 2s;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-0.5px);
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+} 
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+} */
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .25s;
+  animation-fill-mode: backwards;
 }
