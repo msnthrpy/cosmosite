@@ -1,0 +1,27 @@
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.3) 0%,
+      rgba(108, 233, 255, 0.3) 5%,
+      rgba(212, 135, 235, 0.4) 10%,
+      rgba(255, 173, 118, 0.4) 15%,
+      rgba(140, 214, 186, 0.5) 20%,
+      rgba(255, 164, 164, 0.5) 25%,
+      rgba($color-card-3, 0.6) 30%,
+      rgba($color-card-2, 0.6) 35%,
+      rgba(115, 172, 182, 0.65) 40%,
+      rgba(142, 113, 180, 0.65) 45%,
+      rgba($color-card-1, 0.65) 50%,
+      transparent 50%
+    ),
+    url(../img/galaxygo.jpg);
+  background-size: cover;
+  height: 50rem;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 3rem rgba($color-black, 0.3);
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
+}

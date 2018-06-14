@@ -1,0 +1,43 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+
+.section-features {
+  outline: 1px solid transparent;
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-bg-a, 0.5),
+      rgba($color-bg-b, 0.5)
+    ),
+    url(../img/hubble.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.section-tours {
+  background-color: $color-grey-light-1;
+  outline: 1px solid transparent;
+  padding: 25rem 0 15rem 0;
+  margin-top: -9rem;
+}
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-bg-a, 0.5),
+    rgba($color-bg-b, 0.5)
+  );
+}
